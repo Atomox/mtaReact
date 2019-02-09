@@ -24,6 +24,9 @@ export default class MtaDelaysApi {
   }
 
   getEnv = () => {
+
+    log.info(process.env);
+
     return (process)
       ? _.get(process, "env.NODE_ENV", 'dev')
       : 'dev';
