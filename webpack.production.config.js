@@ -8,6 +8,7 @@ var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	inject: 'body'
 });
 module.exports = {
+//	mode: 'production',
 	entry: __dirname + '/app/index.js',
 	module: {
 		loaders: [
@@ -30,9 +31,7 @@ module.exports = {
 		HTMLWebpackPluginConfig,
 		new webpack.DefinePlugin(
 			{
-				'process.env': {
-					'NODE_ENV': '"' + process.env.NODE_ENV + '"'
-				}
+				'process.env.NODE_ENV': JSON.stringify("production")
 			}
 		)],
 	devtool: 'cheap-module-eval-source-map',
