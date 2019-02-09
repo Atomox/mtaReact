@@ -29,12 +29,12 @@ module.exports = {
 	},
 	plugins: [
 		HTMLWebpackPluginConfig,
-		new webpack.DefinePlugin(
-			{
-				'process.env': {
-					'NODE_ENV': JSON.stringify("production")
-				}
-			}
-		)],
+		new webpack.DefinePlugin({
+		  'process.env':{
+		    'NODE_ENV': JSON.stringify('production'),
+		    'HI_DAD': JSON.stringify('soup')
+		  }
+		}),
+	],
 	devtool: 'cheap-module-eval-source-map',
 };
