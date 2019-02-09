@@ -28,8 +28,8 @@ export default class MtaDelaysApi {
     log.info(process);
 
     return (process)
-      ? _.get(process, "env.NODE_ENV", 'dev')
-      : 'dev';
+      ? _.get(process, "env.NODE_ENV", 'production')
+      : 'production';
   }
 
   getEnvUrl = () => {
