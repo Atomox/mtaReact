@@ -16,7 +16,7 @@ const api = {
     port: 8100,
     endpoint_prefix: '',
     logger: {
-      level: 'warn'
+      level: 'info'
     }
   },
   production: {
@@ -25,7 +25,7 @@ const api = {
     port: '80',
     endpoint_prefix: '/api',
     logger: {
-      level: 'error'
+      level: 'info'
     }
   },
 };

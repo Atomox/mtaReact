@@ -2,7 +2,7 @@
 
 const _ = require('lodash');
 
-import * as api from '../../config/settings';
+import api from '../../config/settings';
 
 let helpers = ( () => {
 
