@@ -155,10 +155,12 @@ class Summary extends React.Component {
 
 		render() {
 
-			if (!this.props.events || this.props.events.length <= 0) { return null; }
+			if (!this.props.events || this.props.events.length <= 0) {
+				return null;
+			}
 
 			// Analyze all events, and gather summary information.
-			let { lines, line_boros, lines_affected, boro_count} = this.prepareEvents(this.props.events);
+			let { lines, line_boros, lines_affected, boro_count } = this.prepareEvents(this.props.events);
 
 			// Get a final boro_severity for each boro.
 			let boro_severity = this.determineSeverity(boro_count);
@@ -187,14 +189,13 @@ class Summary extends React.Component {
 									bronx={boro_count['Bx']}
 									statenIsland={boro_count['SI']}
 									/>
+
 							</div>
 						</div>
 					</div>
 					<div className="cell small-11 medium-7 large-7">
-
 						<DateDisplay
 							age={this.props.age} />
-
 						{
 							Object.keys(lines).map(l => (<GroupLineCard
 								key={_.uniqueId('lineCard-')}
@@ -203,6 +204,7 @@ class Summary extends React.Component {
 								boros={line_boros[l]}
 								events={lines[l]}/>) )
 						}
+
 					</div>
 				</div>
 			);

@@ -56,10 +56,10 @@ class App extends React.Component {
 
         <Summary
           events={this.state.events}
-          age={this.state.age}
+          age={_.get(this.state, 'age')}
           status={this.state.status}
           numEvents={this.state.events.length}
-          archive={this.state.archive}
+          archive={_.get(this.state, 'archive', '{}')}
           summary={this.state.summary}
           />
 

@@ -1,12 +1,13 @@
+let React = require('react');
 
 const Logo = (props) => {
 
 	return (
-		<View className="Logo">
-			<Text h1>Subway</Text>
-			<Text h2>New York City</Text>
-			<Text h3>Delays</Text>
-		</View>
+		<div className="Logo">
+			<h1>Subway</h1>
+			<h2>New York City</h2>
+			<h3>Delays</h3>
+		</div>
 	);
 }
 
