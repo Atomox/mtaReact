@@ -1,4 +1,7 @@
+var webpack = require('webpack');
+
 var HTMLWebpackPlugin = require('html-webpack-plugin');
+
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
 	template: __dirname + '/app/index.html',
 	filename: 'index.html',
@@ -23,6 +26,14 @@ module.exports = {
 		filename: 'transformed.js',
 		path: __dirname + '/build'
 	},
-	plugins: [HTMLWebpackPluginConfig],
+	plugins: [
+		HTMLWebpackPluginConfig,
+		new webpack.DefinePlugin(
+			{
+				'process.env': {
+					'NODE_ENV': '"' + process.env.NODE_ENV + '"'
+				}
+			}
+		)],
 	devtool: 'cheap-module-eval-source-map',
 };
