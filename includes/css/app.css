@@ -312,23 +312,26 @@ use.staten_island:hover {
 }
 
 .Logo h1 {
-	font-size: 4.2rem;
-	font-weight: 500;
+	display: inline-block;
+	padding-right: .5rem;
+	font-size: 3rem;
+	font-weight: 400;
 	color: #777;
 }
-.Logo h2,
-.Logo h3 {
-	font-size: 2.1rem;
+.Logo h2 {
+	display: inline-block;
+	font-size: 3rem;
+	font-weight: 300;
+	margin-top: -0.25rem;
 	color: #999;
 }
-.Logo h2 {
-	margin-top: -1.45rem;
-	font-weight: 200;
-}
 .Logo h3 {
+	font-size: 1.5rem;
+	font-weight: 300;
 	margin-top: -0.75rem;
-	font-weight: bold;
+	color: #999;
 }
+
 
 /**
  * DATE / TIME HEADER
