@@ -6,7 +6,7 @@ let EventList = require('./event-list').EventList;
 let Header = require('./header').Header;
 let Summary = require('./summary').Summary;
 
-import MTADApi from '../../../app/src/shared/js/MtaDelaysApi';
+import MTADApi from '../MtaDelaysApi';
 
 /**
  * The main app container.
